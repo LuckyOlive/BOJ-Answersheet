@@ -1,0 +1,62 @@
+# 1297
+
+d,h,w = map(int, input().split())
+x = (w**2/(w**2+h**2)*d**2)**(1/2)
+y = h/w*x
+print(int(y),int(x))
+
+# 1330
+
+a,b = map(int, input().split())
+
+if a > b :
+    print(">")
+elif a == b :
+    print("==")
+elif a < b :
+    print("<")
+
+# 1712
+
+a, b, c = map(int, input().split())
+
+if b >= c:
+    print(-1)
+else:
+    print(a // (c - b) + 1)
+
+# 2420
+
+a, b = map(int, input().split())
+print(abs(a-b))
+
+#2480
+
+a, b, c = map(int, input().split())
+
+if a == b == c :
+    print(10000 + 1000 * a)
+elif a == b != c :
+    print(1000 + 100 * a)
+elif b == c != a:
+    print(1000 + 100 * b)
+elif c == a != b:
+    print(1000 + 100 * c)
+elif a != b != c:
+    print(max(a,b,c)*100)
+
+# 2525
+
+h, m = map(int, input().split())
+t = int(input())
+
+h += t // 60
+m += t % 60
+
+if m >= 60:
+    h += 1
+    m -= 60
+if h >= 24:
+    h -= 24
+
+print(h, m)
